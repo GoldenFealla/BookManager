@@ -1,0 +1,34 @@
+@BookManager_HostAddress = http://localhost:5229
+
+### List book
+
+GET {{BookManager_HostAddress}}/books/list?page=17&limit=5
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImp0aSI6Ijc4Zjc2ZTk4LWRiNzQtNDI1Yi04YzZhLTE5NWNjMTBmNzEyYSIsInN1YiI6ImFkbWluIiwiaWF0IjoiMTc0MjkxNTgwMSIsImV4cCI6MTc0MjkxNjEwMSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MjI5LyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTIyOS8ifQ.qiKQbgwt-L8SYwzQHvx8fdcevORWDK7ux1HjUI04qeezyX4R46GclhQuOt3rkireBxarXhtaCSu5q6HVmiGy9kRVwsdwrIQCiumhJw3pFL7YQ43-54axqYsqt2tUi8rH20eN4A1an5SsXvtCJtuyIXK56P0VDg6_4zrZhbN7cWNttMGJPluzddABaaKR2mMZ58IEOP8WfU3cy9wzFAR6JtMCeVjnfk-SqeBKr45CT8TqABhLvjxjNcuVlKEG0Q3v8ImjWC6N0W-By606rarw51nH5on1LwYB5GQk3zTahN2LmTI3YOUqIsovTkvmFocW2_NfQt4P1hwHp0Zd4gsrHA
+Accept: application/json
+
+### Get book success
+
+GET {{BookManager_HostAddress}}/books/000213179X
+Accept: application/json
+
+### Get book error
+
+GET {{BookManager_HostAddress}}/books/0000000000
+Accept: application/json
+
+### Search book
+
+GET {{BookManager_HostAddress}}/books/search/people
+Accept: application/json
+
+
+### Login
+
+POST {{BookManager_HostAddress}}/users/login
+Accept: application/json
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "password"
+}
